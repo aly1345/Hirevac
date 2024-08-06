@@ -1,0 +1,415 @@
+
+/* -----------------geniral-------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.clear {
+  clear:both;
+}
+
+.contaner {
+  margin: 0 16%;
+  width: 68%;
+  max-width: 68%;
+}
+
+body {
+  height: 4000px;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+@keyframes rotate-1 {
+  0%{transform: rotateZ(700deg);}
+  25%{transform: rotateZ(1000deg);}
+  50%{transform: rotateZ(2000deg);}
+  75%{transform: rotateZ(3000deg);}
+  100%{transform: rotateZ(5000deg);}
+}
+
+
+
+
+/*----------------main-content---------------*/
+
+
+.main-content {
+  background-image: url(../images/slider-bg.jpg);
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.color-op {
+  background-color: rgba(8, 19, 92, 0.9);
+  width: 100%;
+  height: 100%;
+  padding-bottom: 16.5%;
+}
+
+
+
+/*---------------header---------------*/
+
+.button-phone {
+  visibility: hidden;
+  display: none;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+}
+
+.logo {
+  width: 20%;
+  margin: 1.2% 0 0 0.7%;
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+}
+
+nav {
+  width:80%;
+  text-align: right;
+  color: white;
+}
+
+ul .nav-list-l {
+  list-style: none;
+  margin: 2.4% 1.9%;
+  display: inline-block;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+ul a {
+  padding: 2% 0;
+}
+
+ul .nav-list-s {
+  margin: 2.8% 2% 2.8% 0;
+}
+
+nav ul li p {
+  margin-left: 0.02%;
+  display: inline-block;
+}
+
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}
+
+nav ul a:hover {
+  color: #e41a2b;
+}
+
+nav ul li:hover {
+  color: #e41a2b;
+}
+
+
+/*header__mobile*/
+@media screen and (max-width: 840px) {
+  
+
+
+  .button-phone div {
+    width: 35px;
+    height: 5px;
+    display: block;
+    background-color: white;
+    border-radius: 2px;
+    margin-top: 5px;
+  }
+
+  .button-phone {
+    visibility: visible;
+    background-color: rgba(8, 19, 92, 0.9);
+    display: inline-block;
+    border: 0;
+    position: absolute;
+    right: 23px;
+    top: 27px;
+  }
+
+  .button-phone:focus + nav {
+    visibility: visible;
+    display: inline-block;
+  }
+
+  .button-phone:focus :nth-child(n) {
+    position: relative;
+  }
+  
+  .animation-rotate-1:focus {
+    animation-name: rotate-1;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+  }
+
+  .logo {
+    display: block;
+    width: 100%;
+  }
+
+  nav {
+    display: block;
+    visibility: hidden;
+    display: none;
+    width:100%;
+    text-align: right;
+    color: white;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  nav ul li {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+
+
+
+  ul .nav-list-l {
+    list-style: none;
+    margin: -1.2%;
+    display: inline-block;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+    
+}
+
+
+
+/*---------------interface---------------*/
+
+
+
+.main-text {
+  text-align: center;
+  width: 90%;
+  padding-top: 5%;
+  margin: 5% auto 0;
+  color: white;
+}
+
+h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  line-height: 120%;
+}
+
+.main-text p {
+  margin: 2% 0;
+}
+
+
+/*interface__mobile*/
+
+@media screen and (max-width: 991px) {
+
+  .main-text{
+    padding-top: 0;
+    margin: 3% auto 0;
+  }
+
+}
+
+
+
+/* -------------------interface-input------------------ */
+
+
+
+.main-inputs {
+  text-align: center;
+}
+
+.input-style {
+  width: 15%;
+  height: 2%;
+  font-size: 15px;
+  padding: 1%;
+  border-radius: 10px;
+  margin: 0 0.2%;
+  border: 0;
+}
+
+.s-grid label {
+  color: white;
+  font-size: 18px;
+  position: relative;
+  top: -5px;
+}
+
+input[type=checkbox] {
+  margin: 1.5% 0.5% 0;
+  width: 20px;
+  height: 20px;
+  
+}
+  
+input[type="submit"] {
+  display: inline-block;
+  width: 12%;
+  height: 3%;
+  background-color: #e41a2b;
+  font-size: 15px;
+  padding: 1%;
+  border-radius: 7px;
+  color: white;
+  border: 0;
+  margin: 0 0.2%;
+}
+
+input[type="submit"]:hover {
+  background-color: rgba(8, 19, 92, 0.4);
+  border: 1px solid #e41a2b;
+  color: #e41a2b;
+  transition: 0.5s;
+}
+
+
+/*interface-input_mobile*/
+
+@media screen and (max-width: 991px) {
+  
+  .main-inputs {
+    text-align: center;
+    width: 100%;
+  }
+
+  .input-style {
+    display: block;
+    width: 80%;
+    height: 4%;
+    margin: 3% auto;
+    padding: 2%;
+    font-size: 20px;
+  }
+    
+  input[type="submit"] {
+    width: 25%;
+    height: 5%;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: rgba(8, 19, 92, 0.4);
+    border: 1px solid #e41a2b;
+    color: #e41a2b;
+    transition: 0.5s;
+  }
+}
+
+
+
+/*---------------jobs-nav-section-----------------*/
+
+
+
+.jobs-nav {
+  background-color: #e41a2b;
+  width: 100%;
+}
+
+.job-divs {
+  padding: 2% 0;
+  display: inline-block;
+  width: 16.3%;  
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  margin-top: -0.2%;
+}
+
+.job-divs:hover {
+  background-color: rgba( 0, 0, 0, 0.2);
+  transition: background-color 1s;
+}
+
+.job-divs img {
+  width: 18%;
+}
+
+.job-divs p {
+  font-size: 20px;
+  text-transform: capitalize;
+  margin-top: 10px;
+}
+
+.job-divs p span {
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 770px) and (max-width: 1200px) {
+    
+  .job-divs {
+    width: 32.5%;
+    padding: 20px 0;
+  }
+}
+
+@media screen and (min-width: 575px) and (max-width: 769px) {
+
+  .job-divs {
+    width: 49%;
+    padding: 20px 0;
+  }
+}
+
+@media screen and (max-width: 574px) {
+
+  .job-divs {
+    width: 100%;
+    padding: 20px 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
